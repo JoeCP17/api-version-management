@@ -1,4 +1,5 @@
-package com.example.apiversionmanagement.version
+package com.example.apiversionmanagement.mimetype
+
 
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.TYPE)
 @Retention(AnnotationRetention.RUNTIME)

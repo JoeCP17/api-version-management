@@ -1,4 +1,4 @@
-package com.example.apiversionmanagement.version
+package com.example.apiversionmanagement.mimetype
 
 import jakarta.servlet.http.HttpServletRequest
 import org.springframework.web.servlet.mvc.condition.AbstractRequestCondition
@@ -8,8 +8,7 @@ import java.util.regex.Pattern
 class VersionResourceRequestCondition(
     private val acceptedMediaType: String,
     versions: Collection<VersionRange>
-) :
-    AbstractRequestCondition<VersionResourceRequestCondition>() {
+) : AbstractRequestCondition<VersionResourceRequestCondition>() {
 
     private val versions: Set<VersionRange> = versions.toSet()
 

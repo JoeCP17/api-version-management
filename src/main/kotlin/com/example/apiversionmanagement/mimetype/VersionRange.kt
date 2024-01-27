@@ -1,4 +1,4 @@
-package com.example.apiversionmanagement.version
+package com.example.apiversionmanagement.mimetype
 
 data class VersionRange(
     val from: Version,

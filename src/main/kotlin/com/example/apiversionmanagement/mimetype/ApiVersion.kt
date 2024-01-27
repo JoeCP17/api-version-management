@@ -1,4 +1,4 @@
-package com.example.apiversionmanagement.version
+package com.example.apiversionmanagement.mimetype
 
 object ApiVersion {
     const val V1: String = "1.0"

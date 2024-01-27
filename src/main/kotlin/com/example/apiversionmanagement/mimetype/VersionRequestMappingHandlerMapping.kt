@@ -1,4 +1,4 @@
-package com.example.apiversionmanagement.version
+package com.example.apiversionmanagement.mimetype
 
 import org.springframework.core.annotation.AnnotationUtils
 import org.springframework.web.servlet.mvc.condition.RequestCondition
