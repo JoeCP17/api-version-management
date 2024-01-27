@@ -22,15 +22,19 @@ class VersionInterceptorHandler : HandlerInterceptor {
         }
 
         if (handler is HandlerMethod) {
-            val methodCondition = getCustomMethodCondition(handler.method)
+            val methodCondition = getCustomMethodTypeCondition(handler)
             methodCondition.let {
-                // 여기서 methodCondition을 사용
                 println(methodCondition)
                 return true
             }
         }
 
         return false
+    }
+
+    private fun getCustomMethodTypeCondition(handlerMethod: HandlerMethod): RequestCondition<*> {
+        val methodAnnotation = AnnotationUtils.findAnnotation(handlerMethod.method, VersionResource::class.java)
+        return createCondition(methodAnnotation!!)
     }
     private fun getCustomMethodCondition(method: Method): RequestCondition<*> {
         val methodAnnotation = AnnotationUtils.findAnnotation(method, VersionResource::class.java)

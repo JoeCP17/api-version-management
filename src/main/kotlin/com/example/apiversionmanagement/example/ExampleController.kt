@@ -15,13 +15,13 @@ class ExampleController {
      * 3. Mime Type을 통한 버전관리
      */
     @GetMapping("/api/v1/example")
-    fun example(): String = "네이밍을 통한 버전관리 API 입니다."
+    fun exampleUri(): String = "URI를 통한 버전관리 API 입니다."
 
-    @GetMapping("/example")
+    @GetMapping("/version/example")
     @VersionResource(from = ApiVersion.V1)
-    fun exampleV1(): String = "버전관리 어노테이션을 통한 버전관리 API 입니다."
+    fun exampleMimeType(): String = "Mime Type Version Type API"
 
     @GetMapping("/resolver/example", headers = ["X-API-VERSION=2.0"])
-    fun exampleResolver(): String = "Header을 통한 버전관리 API 입니다."
+    fun exampleHeader(): String = "Header을 통한 버전관리 API 입니다."
 
 }
