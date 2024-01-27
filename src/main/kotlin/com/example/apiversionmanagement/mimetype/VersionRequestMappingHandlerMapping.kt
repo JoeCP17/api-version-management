@@ -6,6 +6,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import java.lang.reflect.Method
 
 class VersionRequestMappingHandlerMapping: RequestMappingHandlerMapping() {
+
     override fun getCustomTypeCondition(handlerType: Class<*>): RequestCondition<*> {
         val typeAnnotation =
             AnnotationUtils.findAnnotation(handlerType, VersionResource::class.java)

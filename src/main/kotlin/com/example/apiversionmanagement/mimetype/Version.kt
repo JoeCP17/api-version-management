@@ -12,7 +12,7 @@ class Version (
     }
 
     private fun create(version: String) {
-        val tokens = version.split("//.")
+        val tokens = version.split(".")
 
         if (tokens.size != 2) {
             throw IllegalArgumentException("version must be in the form of 'major.minor'")
