@@ -2,7 +2,6 @@ package com.example.apiversionmanagement.example
 
 import com.example.apiversionmanagement.mimetype.ApiVersion
 import com.example.apiversionmanagement.mimetype.VersionResource
-import com.example.apiversionmanagement.resolver.Version
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -23,5 +22,6 @@ class ExampleController {
     fun exampleV1(): String = "버전관리 어노테이션을 통한 버전관리 API 입니다."
 
     @GetMapping("/resolver/example", headers = ["X-API-VERSION=2.0"])
-    fun exampleResolver(): String = "resolver을 통한 버전관리 API 입니다."
+    fun exampleResolver(): String = "Header을 통한 버전관리 API 입니다."
+
 }
